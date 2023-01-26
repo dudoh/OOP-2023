@@ -16,6 +16,11 @@ public class Main
 		Dog penny = new Dog();
 		penny.setName("Penny");
 		penny.speak();
+
+		cat xavier = new cat("Xavier");
+        while (xavier.getNumLives() > 0) {
+            xavier.kill();
+
 	}
-	
+	}
 }
