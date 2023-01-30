@@ -22,5 +22,6 @@ public class Main
             xavier.kill();
 
 	}
+	helloProcessing();
 	}
 }
