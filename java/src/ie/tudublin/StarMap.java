@@ -53,23 +53,21 @@ public class StarMap extends PApplet
 
 	public void drawGrid()
 	{
-		stroke(0, 255, 255);
+		stroke(0,255,255);
+		fill(58,255,44);
 		float border = width * 0.1f;
-
-		for(int i = -5 ; i <= 5 ; i ++)
+		for(int i = -5; i<= 5; i++)
 		{
-			float x = map(i, -5, 5, border, width - border);
-			line(x, border, x, height - border);
-			line(border, x, width - border, x);
+			float x = map(i, -5,5,border,width - border);
+			line(x,border,x,height - border);//creates vert lines
+			line(border,x,width-border,x);//creates horz lines
 
-			textAlign(CENTER, CENTER);
-			text(i, x, border * 0.5f);
-			text(i, border * 0.5f, x);
+			textAlign(CENTER,CENTER);
+			text(i,x,border*0.5f);//numbs at top
+			text(i,border*0.5f,x);//numbs down the side
 		}
-
 		//float f = map(5, 0, 10, 100, 200);
 		//float f1 = map1(5, 0, 10, 100, 200);
-		
 	}
 
 	float map1(float a, float b, float c, float d, float e)
