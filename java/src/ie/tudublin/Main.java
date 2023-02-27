@@ -26,6 +26,12 @@ public class Main
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new StarMap());
     }
+
+	public static void audio1()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Audio1());
+    }
 	
 	public static void main(String[] args)
 	{
@@ -35,6 +41,6 @@ public class Main
 		penny.setName("Penny");
 		penny.speak();
 
-		starMap();
+		audio1();
 	}
 }
