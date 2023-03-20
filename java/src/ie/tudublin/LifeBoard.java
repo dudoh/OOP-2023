@@ -30,9 +30,9 @@ public class LifeBoard {
         {
             for (int j = -1 ; j <= 1 ; j ++)
             {
-                if (! (i == 0) && (j == 0))
+                if (! (i == 0 && j == 0))
                 {
-                    if (getCell(i, j))
+                    if (getCell(row + i,col + j))
                     {
                         count ++;
                     }
@@ -78,7 +78,8 @@ public class LifeBoard {
                 // dead with 3 neighboiurs comes to life
             }
         }
-        boolean[][] temp = board;
+        boolean[][] temp ;
+        temp = board;
         board = next;
         next = temp;
     }
@@ -108,15 +109,15 @@ public class LifeBoard {
     {
         for(int row = 0 ; row < size ; row ++)
         {
-            p.stroke(255);
+            p.stroke(0);//row + collumn color
             for (int col = 0 ; col < size ; col ++)
             {
-                float x = col * cellWidth;
-                float y = row * cellWidth;
+                float x = col  * cellWidth; //up
+                float y = row * cellWidth; //across
 
                 if (board[row][col])
                 {
-                    p.fill(0, 255, 0);
+                    p.fill(144, 3, 252);
                 }
                 else
                 {
